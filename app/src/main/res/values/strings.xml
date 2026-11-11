@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Passport Reader</string>
+    <string name="home_title">Passport Reader</string>
+    <string name="home_subtitle">Reads e-passports (chip) and machine-readable passports (MRZ only). Everything stays on this phone.</string>
+    <string name="scan_passport">Scan passport</string>
+    <string name="enter_manually">Enter details manually</string>
+    <string name="nfc_ready">NFC is on: e-passport chips can be read.</string>
+    <string name="nfc_off">NFC is turned off. Turn it on to read e-passport chips.</string>
+    <string name="nfc_missing">This phone has no NFC. Only the MRZ (printed lines) can be read.</string>
+    <string name="nfc_settings">Open NFC settings</string>
+    <string name="how_title">How it works</string>
+    <string name="how_body">1. Point the camera at the passport photo page. The two lines of &lt;&lt;&lt; text at the bottom (the MRZ) are read automatically.\n\n2. e-passport (chip logo on the cover): hold the phone against the passport to read the chip, photo and security checks.\n\n3. Passport without a chip (MRP): tap “No chip” to see the MRZ data.</string>
+
+    <string name="camera_permission_needed">Camera permission is needed to scan the passport.</string>
+    <string name="camera_failed">Could not start the camera: %1$s</string>
+    <string name="scan_hint">Place the passport photo page inside the frame</string>
+    <string name="scan_hold_still">Found it. Hold still…</string>
+    <string name="scan_slow_hint">Still looking. Try more light, avoid glare, move a little closer, or tap the screen to focus.</string>
+    <string name="type_instead">Type details instead</string>
+
+    <string name="chip_title">Hold the passport to your phone</string>
+    <string name="chip_body">Close the passport and lay the phone flat on the cover (or on the photo page for some countries). Move slowly until it vibrates, then keep still for 5 to 15 seconds.\n\nTip: remove thick or metal phone cases. The NFC antenna is usually in the middle of the phone’s back.</string>
+    <string name="chip_skip">No chip: show MRZ data</string>
+    <string name="chip_edit">Edit document number / dates</string>
+    <string name="chip_waiting">Waiting for passport…</string>
+    <string name="chip_denied">The chip rejected the key. The document number, date of birth or expiry date doesn’t match what’s printed. Check them and try again.</string>
+    <string name="chip_lost">Connection lost. Keep the phone completely still on the passport and try again.</string>
+    <string name="chip_error">Could not read the chip: %1$s</string>
+    <string name="nfc_needed">NFC is needed to read the chip.</string>
+
+    <string name="manual_title">Passport details</string>
+    <string name="manual_doc">Document number</string>
+    <string name="manual_dob">Date of birth (DD/MM/YYYY)</string>
+    <string name="manual_exp">Date of expiry (DD/MM/YYYY)</string>
+    <string name="manual_invalid">Enter the document number and both dates as DD/MM/YYYY.</string>
+    <string name="ok">Continue</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="result_title">Passport details</string>
+    <string name="read_chip">Read chip (e-passport)</string>
+    <string name="scan_another">Scan another passport</string>
+    <string name="copy">Copy as text</string>
+    <string name="copied">Copied</string>
+</resources>
