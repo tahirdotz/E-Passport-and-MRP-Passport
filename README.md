@@ -13,6 +13,16 @@ Security checks on ePassports:
 - **Printed page vs chip**: the scanned MRZ is compared field by field with the chip.
 - Not done: validating the signer up to the country's CSCA root (needs the ICAO/national master list).
 
+## Passport delivery slips (Bangladesh)
+
+**Delivery slips** on the home screen reads, from each slip: application ID, name, passport type, delivery type, tentative collection date, NID ("Personal No"), date of birth and the barcode.
+
+- **Fast batch scanning**: barcode and text are read together on every camera frame. Fields that cross-check (application ID = end of the barcode, name = Given Name + Surname, 17-digit NID starts with the birth year) are accepted from a single frame. Each slip saves itself with a beep, so just put the next slip under the camera.
+- **Import photos / scans** from the gallery (up to 100 at a time). Sideways scans are rotated automatically.
+- **Check flags**: any value no second source confirmed (e.g. a date half-covered by a pen mark) is marked *check*. Tap a slip to fix it.
+- **Export CSV**: opens correctly in Excel / Google Sheets (long numbers kept intact). Share it to email, Drive, WhatsApp, etc.
+- Saved slips stay in the app's private storage on the phone until you tap **Clear all**.
+
 ## Run it on your phone
 
 1. Android Studio → **File › Open** → select this `PassportReader` folder. Let Gradle sync.

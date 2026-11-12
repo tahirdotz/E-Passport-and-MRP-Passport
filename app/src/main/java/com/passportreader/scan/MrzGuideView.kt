@@ -32,6 +32,13 @@ class MrzGuideView @JvmOverloads constructor(
         typeface = android.graphics.Typeface.MONOSPACE
     }
     private val window = RectF()
+
+    /** Width / height of the guide window. Default: TD3 passport data page. */
+    var aspect: Float = 125f / 88f
+    /** Draw the dashed MRZ band (off for delivery slips). */
+    var showMrzBand: Boolean = true
+    /** If set, the window's top edge as a fraction of the view height. */
+    var topFraction: Float? = null
     private val path = Path()
 
     /** Turns the frame green once a valid MRZ has been seen at least once. */
@@ -47,9 +54,9 @@ class MrzGuideView @JvmOverloads constructor(
         val w = width.toFloat()
         val h = height.toFloat()
         val ww = w * 0.92f
-        val wh = ww * 88f / 125f
+        val wh = ww / aspect
         val left = (w - ww) / 2
-        val top = (h - wh) / 2.4f
+        val top = topFraction?.let { h * it } ?: ((h - wh) / 2.4f)
         window.set(left, top, left + ww, top + wh)
         val r = 14 * density
 
@@ -59,6 +66,7 @@ class MrzGuideView @JvmOverloads constructor(
         path.addRoundRect(window, r, r, Path.Direction.CW)
         canvas.drawPath(path, scrim)
         canvas.drawRoundRect(window, r, r, frame)
+        if (!showMrzBand) return
 
         // MRZ occupies roughly the bottom 22% of the TD3 data page.
         val bandTop = window.bottom - wh * 0.24f

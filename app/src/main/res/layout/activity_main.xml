@@ -93,6 +93,40 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/slips_title"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/slips_home_body" />
+
+            <Button
+                android:id="@+id/btn_slips_scan"
+                style="@style/PrimaryButton"
+                android:layout_marginTop="14dp"
+                android:text="@string/slips_scan" />
+
+            <Button
+                android:id="@+id/btn_slips_list"
+                style="@style/SecondaryButton"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/how_title"
                 android:textColor="@color/text"
                 android:textSize="16sp"

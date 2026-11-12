@@ -42,4 +42,25 @@
     <string name="scan_another">Scan another passport</string>
     <string name="copy">Copy as text</string>
     <string name="copied">Copied</string>
+
+    <string name="slips_title">Delivery slips</string>
+    <string name="slips_home_body">Read application ID, name, passport type, delivery type, collection date, NID, date of birth and barcode from passport delivery slips.</string>
+    <string name="slips_scan">Scan delivery slips</string>
+    <string name="slips_open">Saved slips (%1$d)</string>
+    <string name="slip_scan_hint">Fit the whole slip in the frame</string>
+    <string name="slip_save_anyway">Save anyway</string>
+    <string name="slip_done">Done</string>
+    <string name="slip_saved">Saved ✓ %1$s</string>
+    <string name="slip_duplicate">Already saved. Show the next slip.</string>
+    <string name="slip_next">Next slip…</string>
+    <string name="slips_import">Import photos</string>
+    <string name="slips_export">Export CSV</string>
+    <string name="slips_clear">Clear all</string>
+    <string name="slips_clear_confirm">Delete all %1$d saved slips from this phone?</string>
+    <string name="slips_empty">No slips yet. Tap Scan to start.</string>
+    <string name="slips_importing">Reading %1$d of %2$d…</string>
+    <string name="slips_import_done">Imported %1$d, skipped %2$d duplicates, %3$d unreadable.</string>
+    <string name="slip_edit_title">Edit slip</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
 </resources>

@@ -16,6 +16,11 @@ import com.passportreader.Session
 import com.passportreader.chip.ChipActivity
 import com.passportreader.mrz.MrzData
 import com.passportreader.scan.ScanActivity
+import com.passportreader.slip.SlipListActivity
+import com.passportreader.slip.SlipScanActivity
+import com.passportreader.slip.SlipStore
+import com.passportreader.slip.SlipVision
+import android.widget.Button
 
 class MainActivity : ComponentActivity() {
 
@@ -40,10 +45,19 @@ class MainActivity : ComponentActivity() {
         findViewById<View>(R.id.nfc_settings).setOnClickListener {
             startActivity(Intent(Settings.ACTION_NFC_SETTINGS))
         }
+        findViewById<View>(R.id.btn_slips_scan).setOnClickListener {
+            startActivity(Intent(this, SlipScanActivity::class.java))
+        }
+        findViewById<View>(R.id.btn_slips_list).setOnClickListener {
+            startActivity(Intent(this, SlipListActivity::class.java))
+        }
+        // Load the OCR + barcode models now, so the first slip scan starts instantly.
+        window.decorView.post { SlipVision.prewarm() }
     }
 
     override fun onResume() {
         super.onResume()
+        findViewById<Button>(R.id.btn_slips_list).text = getString(R.string.slips_open, SlipStore.all(this).size)
         val adapter = NfcAdapter.getDefaultAdapter(this)
         val status = findViewById<TextView>(R.id.nfc_status)
         val settings = findViewById<View>(R.id.nfc_settings)

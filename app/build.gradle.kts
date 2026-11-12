@@ -65,6 +65,8 @@ dependencies {
     // On-device OCR (bundled model, works offline) and face detection for chipless passports
     implementation("com.google.mlkit:text-recognition:16.0.1")
     implementation("com.google.mlkit:face-detection:16.1.7")
+    // Delivery-slip barcode (bundled model, works offline)
+    implementation("com.google.mlkit:barcode-scanning:17.3.0")
 
     // ePassport chip (ICAO 9303): JMRTD + SCUBA Android card service + BouncyCastle
     implementation("org.jmrtd:jmrtd:0.8.9")
